@@ -1,0 +1,122 @@
+#color-red { background-color: #f03325 !important }
+#color-hotpink { background-color: #fb3276 !important }
+#color-calmpink { background-color: #ffb2bc !important }
+
+#color-orange { background-color: #ff7200 !important }
+#color-yellow { background-color: #fed71a  !important }
+#color-lemon { background-color: #f6ff8b !important }
+
+#color-texasgreen { background-color: #057f38 !important }
+#color-limegreen { background-color: #4ce549 !important }
+#color-teagreen { background-color: #bdf5bc !important }
+
+#color-braveblue { background-color: #1e90e0 !important }
+#color-blue { background-color: #69d0e0 !important }
+#color-azure { background-color: #cbf0f7 !important }
+
+#color-violet { background-color: #9006cc !important }
+#color-steelpink { background-color: #c430cc !important }
+#color-pinklavender { background-color: #d8b4e2 !important }
+
+#color-black { background-color: #363636 !important }
+#color-granite { background-color: #80847c !important }
+#color-platinum { background-color: #e0e1df !important }
+
+.hero {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 16pt;
+}
+
+.hero-body {
+    padding: 0;
+    top: 0;
+    margin-top: 3.5em;
+}
+
+.navbar-item {
+    font-size: 14pt;
+}
+
+.navbar-item.small-profile-pict {
+    padding: .5rem .25rem !important;
+}
+
+.navbar-item:hover, .navbar-link:hover, .navbar-link::after {
+    background-color: transparent !important;
+    color: #fb3276 !important;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+    border-color: #fb3276;
+}
+
+.navbar-item img {
+    max-height: 2.75rem;
+}
+
+.image.is-48x48 {
+    height: 42px;
+    width: 42px;
+}
+
+.image.is-48x48 img {
+    max-height: 42px;
+    border: solid;
+}
+
+.frame {
+    border: solid .35rem #363636;
+    padding: .5rem;
+}
+
+.frame svg {
+    display: flex;
+}
+
+.column.is-three-quarters {
+    flex: none;
+    width: 75%;
+    display: flex !important;
+}
+
+.column.is-one-third {
+    display: flex;
+    justify-content: center;
+}
+
+.palette-color {
+    padding: 2.25em !important;
+    border-radius: 50% !important;
+    border: solid .35em white;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.15);
+}
+
+.help-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fas.fa-volume-mute {
+    font-size: 1.5em;
+}
+
+.sound-button {
+    margin-top: -.15em;
+    border: none;
+    color: #fb3276;
+}
+
+.save-button {
+    margin-top: -.15em;
+    background-color: #fed71a !important;
+    border: solid .2rem #363636 !important;
+    color: #363636 !important; 
+}
+
+.save-button:hover {
+    box-shadow:0px 5px 5px rgba(0,0,0,0.15);
+}
+
+.save-button:active {
+    transform: translate(5px, 5px);
+}

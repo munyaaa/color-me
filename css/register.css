@@ -1,0 +1,55 @@
+.signup-button {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 14pt;
+    background-color: #fb3276;
+    color: #363636 !important;
+    border: solid #363636 !important;
+}
+
+.signup-button:hover {
+    box-shadow:0px 5px 5px rgba(0,0,0,0.15);
+}
+
+.signup-button:active {
+    transform: translate(5px, 5px);
+}
+
+.hero {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 14pt;
+}
+
+.input::placeholder {
+    color: #363636;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.input {
+    border: solid .2rem #363636;
+    color: #363636;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    border: solid #363636;
+    background-color: rgba(254,215,26, 0.9);
+    box-shadow:0px 5px 5px rgba(0,0,0,0.15);
+}
+
+.hero {
+    background-image: url('../img/landingpage-img.png');
+    background-size: cover;
+}
+
+.field.is-horizontal {
+    align-items: center;
+}

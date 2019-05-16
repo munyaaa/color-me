@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Color Me! | Coloring</title>
+  <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="css/color-page.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+  <div class="hero is-fullheight-with-navbar">
+    <div class="hero-head">
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
+            <img src="./img/logo.png">
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="./collection.html">Collection</a>
+            <a class="navbar-item">Resources</a>
+            <a class="navbar-item">About Us</a>
+          </div>
+
+          <div class="navbar-end">
+            <!-- <figure class="navbar-item small-profile-pict">
+              <p class="image is-48x48">
+                <img class="is-rounded" src="https://bulma.io/images/placeholders/48x48.png">
+              </p>
+            </figure> -->
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Munyaaa</a>
+
+              <div class="navbar-dropdown">
+                <a class="navbar-item">Profile</a>
+                <a class="navbar-item">Saved</a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">Sign Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-three-quarters frame">
+            <object id="svg-object" data="./img/drawing/1.svg" type="image/svg+xml"></object>
+          </div>
+          <div class="column is-narrow"></div>
+          <div class="column">
+            <div class="columns is-multiline">
+              <div class="column is-one-third"><div class="tag palette-color" id="color-red"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-hotpink"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-calmpink"></div></div>
+
+              <div class="column is-one-third"><div class="tag palette-color" id="color-orange"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-yellow"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-lemon"></div></div>
+
+              <div class="column is-one-third"><div class="tag palette-color" id="color-texasgreen"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-limegreen"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-teagreen"></div></div>
+
+              <div class="column is-one-third"><div class="tag palette-color" id="color-braveblue"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-blue"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-azure"></div></div>
+
+              <div class="column is-one-third"><div class="tag palette-color" id="color-violet"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-steelpink"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-pinklavender"></div></div>
+
+              <div class="column is-one-third"><div class="tag palette-color" id="color-black"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-granite"></div></div>
+              <div class="column is-one-third"><div class="tag palette-color" id="color-platinum"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-three-quarters">
+          <div class="column is-half">
+            <span class="button sound-button"><i class="fas fa-volume-mute"></i></span>
+            <span class="title is-5">Donut Dog</span>
+          </div>
+          <div class="column is-one-quarter help-button">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="button is-primary save-button">
+                  <span class="icon">
+                    <i class="fas fa-save"></i>
+                  </span>
+                  <span>Save</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+<script type="text/javascript" src="./js/script.js"></script>
+<script type="text/javascript" src="js/coloring.js"></script>
+</body>
+</html>

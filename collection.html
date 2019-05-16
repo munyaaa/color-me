@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Color Me! | Collection</title>
+  <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="css/collection-page.css">
+  <style>
+  [data-toggle='on'] {
+    display:flex;
+  }
+
+  [data-toggle='off'] {
+    display:none;
+  }
+
+  .is-clicked {
+    background-color: red !important;
+  }
+</style>
+</head>
+<body>
+  <div class="hero is-fullheight-with-navbar">
+    <div class="hero-head">
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="./img/logo.png">
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item active">Collection</a>
+            <a class="navbar-item">Resources</a>
+            <a class="navbar-item">About Us</a>
+          </div>
+
+          <div class="navbar-end">
+            <!-- <figure class="navbar-item small-profile-pict">
+              <p class="image is-48x48">
+                <img class="is-rounded" src="https://bulma.io/images/placeholders/48x48.png">
+              </p>
+            </figure> -->
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Munyaaa</a>
+
+              <div class="navbar-dropdown">
+                <!-- <a class="navbar-item">Profile</a>
+                <a class="navbar-item">Saved</a> -->
+                <!-- <hr class="navbar-divider"> -->
+                <a class="navbar-item" href="./index.html">Sign Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-multiline category-columns">
+          <div class="column is-1 is-marginless is-paddingless">
+            <div class="button category" id="category-all" data-filter="ping" data-reset="true">All</div>
+          </div>
+          <div class="column is-1 is-marginless is-paddingless">
+            <div class="button category" id="category-animals" data-filter="ping" data-filter-tag="animals">Animals</div>
+          </div>
+          <div class="column is-1 is-marginless is-paddingless">
+            <div class="button category" id="category-foods" data-filter="ping" data-filter-tag="foods">Foods</div>
+          </div>
+          <div class="column is-1 is-marginless is-paddingless">
+            <div class="button category" id="category-seasons" data-filter="ping" data-filter-tag="seasons">Seasons</div>
+          </div>
+          <div class="column is-1 is-marginless is-paddingless">
+            <div class="button category" id="category-things" data-filter="ping" data-filter-tag="things">Things</div>
+          </div>
+        </div>
+        <div class="columns is-multiline" id="drawing" class="ping">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/collection.js"></script>
+</body>
+</html>

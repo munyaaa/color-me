@@ -1,0 +1,102 @@
+.modal {
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    border-radius: 20px;
+    padding: 0 1rem 1rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.modal-close {
+    position: absolute;
+    background-color: crimson !important;
+    top: 10px;
+    right: 10px;
+}
+
+.modal-close:hover {
+    background-color: firebrick !important;
+}
+
+.modal-content .column {
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.column.login-image-column {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.signin-button-in {
+    background-color: #fed71a;
+    border: solid .2rem #363636 !important;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.input-field {
+    border: solid .2rem #fb3276;
+    color: #363636;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.input-field::placeholder {
+    color: #363636;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.hero {
+    background-image: url('../img/landingpage-img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.button.is-medium {
+    padding: 0 2rem;
+    text-decoration: none;
+}
+
+.signup-button {
+    margin-right: 1.25rem;
+    background-color: #fed71a;
+    border: solid .2rem #363636 !important;
+}
+
+.signin-button {
+    color: #363636 !important;
+    background-color: transparent;
+    border: none;
+}
+
+.signup-button:hover, .get-started-button:hover, .signin-button-in:hover {
+    box-shadow:0px 5px 5px rgba(0,0,0,0.15);
+}
+
+.signin-button:hover {
+    background-color: transparent !important;
+    color: #fed71a !important;
+}
+
+.signup-button:active, .get-started-button:active, .signin-button:active, .signin-button-in:active {
+    transform: translate(5px, 5px);
+}
+
+.logo-column {
+    background-image: url('../img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 12.5rem;
+}
+
+.get-started-button {
+    border: solid .2rem #fb3276 !important;
+    background-color: rgba(255,255,255, .75);
+    color: #363636 !important;
+}

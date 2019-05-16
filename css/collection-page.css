@@ -1,0 +1,85 @@
+.active {
+    color: #fb3276;
+}
+
+.hero {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 16pt;
+}
+
+.hero-body {
+    padding: 5rem 1.5rem;
+    align-items: flex-start !important;
+}
+
+.navbar-item {
+    font-size: 14pt;
+}
+
+.navbar-item.small-profile-pict {
+    padding: .5rem .25rem !important;
+}
+
+.navbar-item:hover, .navbar-link:hover, .navbar-link::after {
+    background-color: transparent !important;
+    color: #fb3276 !important;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+    border-color: #fb3276;
+}
+
+.navbar-item img {
+    max-height: 2.75rem;
+}
+
+.image.is-48x48 {
+    height: 42px;
+    width: 42px;
+}
+
+.image.is-48x48 img {
+    max-height: 42px;
+}
+
+.image.is-128x128 {
+    height: auto;
+    width: 256px;
+    margin: .75em;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+}
+
+.column .button {
+    margin: .75em;
+}
+
+.category {
+    background-color: #fed71a;
+    border: none;
+}
+
+.category:hover {
+    background-color: #fb3276;
+    border: none;
+    color: white;
+}
+
+.category-columns .column {
+    width: auto !important;
+}
+
+.category-columns {
+    justify-content: center;
+}
+
+.image img {
+    border: solid;
+}
+
+.image img:hover {
+    cursor: pointer;
+}
