@@ -120,3 +120,7 @@
 .save-button:active {
     transform: translate(5px, 5px);
 }
+
+canvas {
+    display: none;
+}

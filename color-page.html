@@ -54,9 +54,12 @@
         <div class="columns">
           <div class="column is-three-quarters frame" id="drawing-frame">
             <script>
-              let id = window.location.search.split('?id=')[1]
+              let idFirstIdx = window.location.search.indexOf('?id=')+4
+              let idLastIdx = window.location.search.indexOf('&')
+              let id = window.location.search.substring(idFirstIdx,idLastIdx)
               document.querySelector('#drawing-frame').innerHTML = `<object id="svg-object" data="./img/drawing/${id}.svg" type="image/svg+xml"></object>`
             </script>
+            <canvas id="canvas"></canvas>
           </div>
           <div class="column is-narrow"></div>
           <div class="column">
@@ -88,18 +91,24 @@
           </div>
         </div>
         <div class="columns is-three-quarters">
-          <div class="column is-half">
+          <div class="column is-half information-div">
             <span class="button sound-button"><i class="fas fa-volume-mute"></i></span>
-            <span class="title is-5">Donut Dog</span>
+            <script>
+              let titleFirstIdx = window.location.search.indexOf('title=')+6
+              let titleLastIdx = window.location.search.length
+              let title = window.location.search.substring(titleFirstIdx,titleLastIdx)
+              document.querySelector('.information-div').innerHTML = `<span class="title is-5">${title.split('+').join(' ')}</span>`
+            </script>
+            
           </div>
           <div class="column is-one-quarter help-button">
             <div class="field is-grouped">
               <p class="control">
-                <a class="button is-primary save-button">
+                <a class="button is-primary save-button" id="save-button">
                   <span class="icon">
-                    <i class="fas fa-save"></i>
+                    <i class="fas fa-download"></i>
                   </span>
-                  <span>Save</span>
+                  <span>Download</span>
                 </a>
               </p>
             </div>
@@ -114,5 +123,6 @@
 <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
 <script type="text/javascript" src="./js/script.js"></script>
 <script type="text/javascript" src="js/coloring.js"></script>
+<!-- <script type="text/javascript" src="test.js"></script> -->
 </body>
 </html>
