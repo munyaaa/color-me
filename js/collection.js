@@ -12,7 +12,7 @@ function getCollection() {
       let category = data.val().category
       drawing.innerHTML += `
       <div class="column is-one-quarter all ${category}" data-tags="${category}"data-toggle="on">
-      <a href="color-page.html?id=${data.key}&title=${title.split(' ').join('+')}" target="_blank">
+      <a href="color-page.html?id=${data.key}&title=${title.split(' ').join('+')}">
       <figure class="image is-128x128 is-marginless">
       <img src="./img/drawing/${data.key}.svg" id=${data.key}>
       <div class="title is-5 is-marginless has-text-centered">${title}</div>
