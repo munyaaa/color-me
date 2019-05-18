@@ -10,10 +10,9 @@ function getCollection() {
     ref.forEach(function(data){
       let title = data.val().title
       let category = data.val().category
-
       drawing.innerHTML += `
-      <div class="column is-one-quarter all ${category}" data-tags="${category}" data-toggle="on">
-      <a href="color-page.html">
+      <div class="column is-one-quarter all ${category}" data-tags="${category}"data-toggle="on">
+      <a href="color-page.html?id=${data.key}" target="_blank">
       <figure class="image is-128x128 is-marginless">
       <img src="./img/drawing/${data.key}.svg" id=${data.key}>
       <div class="title is-5 is-marginless has-text-centered">${title}</div>
@@ -94,38 +93,4 @@ document.addEventListener('click', function(e) {
       }
     }
   }
-})
-
-document.addEventListener('click', function(e){
-  let imageId = e.target.id
-  console.log(e.target.id)
-  // save
-  let savedRef = database.ref(`color-me/savedImages`)
-  savedRef.once('value', function(snapshot){
-    console.log(snapshot.exists())
-    if(snapshot.exists() == false){
-      savedRef.once('value', function(){
-        firebase.database().ref('color-me/savedImages/1').set({
-          id: imageId
-        })
-      })
-    }
-    else {
-      let ref = database.ref(`color-me/savedImages`)
-      ref.orderByValue().limitToLast(1).once("value", addData)
-      function addData(data){
-        data.forEach(function(child){
-          let latest = parseInt(child.val().id) + 1
-          console.log(latest)
-          let newSavedImages = database.ref(`color-me/savedImages/${latest}/`)
-          newSavedImages.on("value", function(data){
-            newSavedImages.set({
-              id : imageId
-            })
-            newSavedImages.off('value')
-          })
-        })
-      }
-    }
-  })
 })

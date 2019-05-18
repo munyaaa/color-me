@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="x">something</div>
+<script type="text/javascript">
+    let id = window.location.search.split('?id=')[1]
+    setTimeout(() => {
+        document.querySelector('#x').innerHTML = id
+    }, 1000)
+</script>
+</body>
+</html>

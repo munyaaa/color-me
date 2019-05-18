@@ -52,8 +52,11 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns">
-          <div class="column is-three-quarters frame">
-            <object id="svg-object" data="./img/drawing/1.svg" type="image/svg+xml"></object>
+          <div class="column is-three-quarters frame" id="drawing-frame">
+            <script>
+              let id = window.location.search.split('?id=')[1]
+              document.querySelector('#drawing-frame').innerHTML = `<object id="svg-object" data="./img/drawing/${id}.svg" type="image/svg+xml"></object>`
+            </script>
           </div>
           <div class="column is-narrow"></div>
           <div class="column">

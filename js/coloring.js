@@ -1,18 +1,4 @@
-// window.addEventListener('onload', (event) => {
-//   var database = firebase.database()
-//   let savedRef = database.ref('color-me/savedImages')
-
-//   savedRef.orderByValue().limitToLast(1).once('value', function (data){
-//     let ref = data
-//     ref.forEach(function(data){
-//       console.log(data.val().id)
-//       document.querySelector('#svg-object').data = `./img/drawing/${data.val().id}.svg`
-//     })
-//   })
-//   console.log('b')
-// })
-
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('load', (event) => {
   var doc = document.querySelector('#svg-object')
   svg = doc.contentDocument
 
