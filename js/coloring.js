@@ -1,6 +1,5 @@
 window.addEventListener('load', (event) => {
-  var doc = document.querySelector('#svg-object')
-  svg = doc.contentDocument
+  svg = $('#svg-object').contentDocument
 
   let backgroundRect = svg.querySelector(`#Background rect`)
   backgroundRect.setAttribute('id', 'b')
@@ -73,9 +72,9 @@ window.addEventListener('load', (event) => {
   }
 
   document.querySelector('#save-button').addEventListener('click', function () {
-    var canvas = document.getElementById('canvas')
-    canvas.width = "880"
-    canvas.height = "505"
+    var canvas = $('#canvas')
+    canvas.width = '880'
+    canvas.height = '505'
     var ctx = canvas.getContext('2d')
     var data = (new XMLSerializer()).serializeToString(elementSvg)
     var DOMURL = window.URL || window.webkitURL || window;
@@ -94,7 +93,6 @@ window.addEventListener('load', (event) => {
 
       triggerDownload(imgURI)
     }
-
     img.src = url
   })
 })

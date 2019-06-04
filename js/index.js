@@ -1,10 +1,19 @@
 var database = firebase.database()
 console.log(database)
 
-document.querySelector('#signin-button').addEventListener('click', function(){
-    document.querySelector('.modal').setAttribute('class', 'modal has-text-centered is-active')
+$('#signin-button').addEventListener('click', function(){
+    $('.modal').setAttribute('class', 'modal has-text-centered is-active')
 })
 
-document.querySelector('#modal-close').addEventListener('click', function(){
-    document.querySelector('.modal').setAttribute('class', 'modal has-text-centered')
+$('#modal-close').addEventListener('click', function(){
+    $('.modal').setAttribute('class', 'modal has-text-centered')
 })
+
+var user = firebase.auth().currentUser
+
+if(user) {
+    console.log(user)
+}
+else {
+    console.log('error')
+}

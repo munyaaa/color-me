@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
   <title>Color Me! | Register</title>
   <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -12,9 +14,9 @@
       <div class="container">
         <div class="columns box">
           <div class="column is-four-fifths has-text-centered">
-            <div class="title is-marginless">Create Your Account !</div>
+            <div class="title">Create Your Account !</div>
           </div>
-          <div class="column is-four-fifths">
+          <div class="column is-four-fifths is-paddingless">
             <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">Email</label>
@@ -22,13 +24,14 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control">
-                    <input class="input" type="email" placeholder="Email">
+                    <input id="email" class="input" type="email" placeholder="Email">
+                    <p id="email-error-msg" class="help is-danger">&nbsp</p>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column is-four-fifths">
+          <div class="column is-four-fifths is-paddingless">
             <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">Username</label>
@@ -36,13 +39,14 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control">
-                    <input class="input" type="username" placeholder="Username">
+                    <input id="username" class="input" type="username" placeholder="Username">
+                    <p id="username-error-msg" class="help is-danger">&nbsp</p>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column is-four-fifths">
+          <div class="column is-four-fifths is-paddingless">
             <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">Password</label>
@@ -50,13 +54,14 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control">
-                    <input class="input" type="password" placeholder="Password">
+                    <input id="password" class="input" type="password" placeholder="Password">
                   </p>
+                  <p id="password-error-msg" class="help is-danger">&nbsp</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column is-four-fifths">
+          <div class="column is-four-fifths is-paddingless">
             <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">Confirm Password</label>
@@ -64,13 +69,14 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control">
-                    <input class="input" type="password" placeholder="Confirm Password">
+                    <input id="confirm-password" class="input" type="password" placeholder="Confirm Password">
                   </p>
+                  <p id="confirm-password-error-msg" class="help is-danger">&nbsp</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column is-four-fifths">
+          <div class="column is-four-fifths is-paddingless">
             <div class="field is-horizontal">
               <div class="field-label is-normal">
                 <label class="label">Birthdate</label>
@@ -78,18 +84,9 @@
               <div class="field-body">
                 <div class="field">
                   <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="DD">
+                    <input id="date" class="input" type="date" placeholder="DD">
                   </p>
-                </div>
-                <div class="field">
-                  <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="MM">
-                  </p>
-                </div>
-                <div class="field">
-                  <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="YYYY">
-                  </p>
+                  <p id="date-error-msg" class="help is-danger">&nbsp</p>
                 </div>
               </div>
             </div>
@@ -97,7 +94,7 @@
           <div class="column is-four-fifths is-centered">
             <div class="field">
               <div class="control has-text-centered control-signup-button">
-                <button class="button is-fullwidth signup-button">
+                <button id="signup-button" class="button is-fullwidth signup-button">
                   Sign Up
                 </button>
               </div>
@@ -108,7 +105,32 @@
           </div>
         </div>
       </div>
+
+      <div class="modal has-text-centered">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="column">
+            <div class="column is-marginless">
+              <button class="modal-close is-large" id="modal-close" aria-label="close"></button>
+            </div>
+
+            <div class="column login-image-column">
+              <figure class="image is-256x256">
+                <img src="img/register-image.png">
+              </figure>
+            </div>
+
+            <p class="title is-3">Register Success!!</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/register.js"></script>
 </body>
 </html>

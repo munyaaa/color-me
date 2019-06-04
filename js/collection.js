@@ -1,7 +1,7 @@
 var database = firebase.database()
 let collectionRef = database.ref('color-me/collection')
 
-let drawing = document.querySelector('#drawing')
+let drawing = $('#drawing')
 let categoryArr = []
 
 function getCollection() {
@@ -41,7 +41,7 @@ document.addEventListener('click', function(e) {
   let button = e.target
   if(button.id.startsWith('category-') == true){
     let filter = button.getAttribute('data-filter')
-    let categoryButton = document.querySelectorAll('.category')
+    let categoryButton = $$('.category')
     var c = button.classList
     var catArr = getCategory()
     if(button.getAttribute('data-reset') === 'true'){

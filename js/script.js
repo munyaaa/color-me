@@ -1,3 +1,6 @@
+const $ = el => document.querySelector(el)
+const $$ = el => document.querySelectorAll(el)
+
 var firebaseConfig = {
   apiKey: " AIzaSyCcaS2msIz1ZPJAkkZQDELFnQteWGkNo3U",
   authDomain: "color-me-b0a2d.firebaseapp.com",
@@ -9,5 +12,3 @@ var firebaseConfig = {
 }
 
 firebase.initializeApp(firebaseConfig)
-
-console.log(firebase)

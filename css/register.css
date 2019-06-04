@@ -1,38 +1,42 @@
-.signup-button {
-    font-family: 'Bubblegum Sans', cursive;
-    font-size: 14pt;
-    background-color: #fb3276;
-    color: #363636 !important;
-    border: solid #363636 !important;
-}
-
-.signup-button:hover {
-    box-shadow:0px 5px 5px rgba(0,0,0,0.15);
-}
-
-.signup-button:active {
-    transform: translate(5px, 5px);
-}
-
-.hero {
-    font-family: 'Bubblegum Sans', cursive;
-    font-size: 14pt;
-}
-
-.input::placeholder {
-    color: #363636;
+.modal {
     font-family: 'Bubblegum Sans', cursive;
 }
 
-.input {
-    border: solid .2rem #363636;
-    color: #363636;
-    font-family: 'Bubblegum Sans', cursive;
-}
-
-.container {
+.modal-content {
     display: flex;
     justify-content: center;
+    width: 400px;
+    border-radius: 20px;
+    padding: 0 1rem 1rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.modal-close {
+    position: absolute;
+    background-color: crimson !important;
+    top: 10px;
+    right: 10px;
+}
+
+.modal-close:hover {
+    background-color: firebrick !important;
+}
+
+.modal-content .column {
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.column.login-image-column {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.image.is-256x256 {
+    width: 256px;
+    height: 256px;
 }
 
 .columns {
@@ -44,12 +48,50 @@
     background-color: rgba(254,215,26, 0.9);
     box-shadow:0px 5px 5px rgba(0,0,0,0.15);
 }
-
+.container {
+    display: flex;
+    justify-content: center;
+}
+.field-body {
+    flex-grow: 2;
+}
+.help {
+    margin-top: 0;
+    margin-bottom: .25em;
+    font-size: .85em;
+}
 .hero {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 14pt;
     background-image: url('../img/landingpage-img.png');
     background-size: cover;
 }
-
-.field.is-horizontal {
-    align-items: center;
+.input {
+    border: solid .2rem #363636;
+    color: #363636;
+    font-family: 'Bubblegum Sans', cursive;
+    padding: 0 .5em;
+}
+.input::placeholder {
+    color: #363636;
+    font-family: 'Bubblegum Sans', cursive;
+}
+.label {
+    text-align: left;
+}
+.signup-button {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 14pt;
+    background-color: #fb3276;
+    color: #363636 !important;
+    border: solid #363636 !important;
+}
+.signup-button:active {
+    transform: translate(5px, 5px);
+}
+.signup-button:hover {
+    box-shadow:0px 5px 5px rgba(0,0,0,0.15);
+}
+.title {
+    line-height: 1.75;
 }
