@@ -28,9 +28,9 @@
   }
 
   function passwordValidation() {
-    passwordRegex = /^.*(?=.{4,})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
+    passwordRegex = /^.*(?=.{6,})(?=.*\d)((?=.*[a-z]){1}).*$/
     if(!($('#password').value.match(passwordRegex))){
-      $('#password-error-msg').innerHTML = 'Password contain at least 4 characters and must include uppercase letter, lowercase letter, and numeric digit'
+      $('#password-error-msg').innerHTML = 'Password contain at least 6 characters and include numeric digit'
       return false
     }
     return true
@@ -73,6 +73,44 @@
     confirmPasswordValidation()
   })
 
+  $('#date').addEventListener('input', function(){
+    $('#date-error-msg').innerHTML = '&nbsp'
+  })
+
+  function register(email, password) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
+      // TODO: input data to DB
+      $('#register-success').classList.add('is-active')
+      $('#register-success-close').addEventListener('click', function(){
+        $('#register-success').classList.remove('is-active')
+        autoLogin(email, password)
+      })
+    }).catch(function(error) {
+      console.log(error)
+      $('#register-error .title').innerHTML = `${error.message}`
+      $('#register-error').classList.add('is-active')
+      $('#register-error-close').addEventListener('click', function(){
+        $('#register-error').classList.remove('is-active')
+      })
+    })
+  }
+
+  function autoLogin(email, password) {
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
+      window.location.href = "collection.html"
+      let user = firebase.auth().currentUser.uid
+
+      //getUserFromDBByUID(firebase.auth().currentUser.uid)
+
+      console.log(user)
+      localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('_token', btoa(JSON.stringify(user)))
+    })
+    .catch(function(error) {
+      console.log(error)
+    })
+  }
+
   $('#signup-button').addEventListener('click', function(e){
     let validCounter = 0
     if(emailValidation() && nullValidation('email')) {
@@ -95,17 +133,6 @@
       let email = $('#email').value
       let password = $('#password').value
 
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-      })
-      $('.modal').classList.add('is-active')
-      firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
-          window.location.href = 'index.html?'+ idToken
-        }).catch(function(error) {
-      })
+      register(email, password)
     }
   })
-
-  $('#modal-close').addEventListener('click', function(){
-    $('.modal').classList.remove('is-active')
-  })
-
