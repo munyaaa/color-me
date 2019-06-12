@@ -21,7 +21,6 @@ $('#sign-out').addEventListener('click', function() {
     localStorage.clear()
     window.location.href = './index.html'
   }).catch(function(error) {
-    // An error happened.
     console.log(error)
   })
 })

@@ -77,9 +77,27 @@
     $('#date-error-msg').innerHTML = '&nbsp'
   })
 
-  function register(email, password) {
+  function writeUserData(userId, email, password, username, birthdate) {
+    firebase.database().ref('color-me/users/' + userId).set({
+      email: email,
+      username: username,
+      passwordDisplay: password,
+      birthdate : birthdate
+    })
+  }
+
+  function replacePasswordToStar(p) {
+    for ( var i = 0 ; i < p.length ; i++ ) {
+      p = p.replace(p[i], '&#x25CF')
+    }
+    return p
+  }
+
+  function register(email, password, passwordDisplay, username, birthdate) {
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function() {
       // TODO: input data to DB
+      let userId = firebase.auth().currentUser.uid
+      writeUserData(userId, email, passwordDisplay, username, birthdate)
       $('#register-success').classList.add('is-active')
       $('#register-success-close').addEventListener('click', function(){
         $('#register-success').classList.remove('is-active')
@@ -132,7 +150,9 @@
     if(validCounter == 5){
       let email = $('#email').value
       let password = $('#password').value
-
-      register(email, password)
+      let passwordDisplay = replacePasswordToStar(password)
+      let username = $('#username').value
+      let birthdate = $('#date').value
+      register(email, password, passwordDisplay, username, birthdate)
     }
   })

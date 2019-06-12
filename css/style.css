@@ -100,3 +100,8 @@
     background-color: rgba(255,255,255, .75);
     color: #363636 !important;
 }
+
+.help {
+    justify-content: center;
+    display: none;
+}

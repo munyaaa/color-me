@@ -30,7 +30,7 @@
 
         <div class="field">
           <div class="control has-icons-left">
-            <input class="input input-field" type="text" placeholder="Username" autofocus>
+            <input id="email" class="input input-field" type="text" placeholder="Email" autofocus>
             <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
@@ -39,7 +39,7 @@
 
         <div class="field">
           <p class="control has-icons-left">
-            <input class="input input-field" type="password" placeholder="Password">
+            <input id="password" class="input input-field" type="password" placeholder="Password">
             <span class="icon is-small is-left">
               <i class="fas fa-lock"></i>
             </span>
@@ -47,8 +47,12 @@
         </div>
 
         <div class="field">
+          <p id="error-msg" class="help is-danger is-size-6 is-centered"></p>
+        </div>
+        
+        <div class="field">
           <p class="control">
-            <button class="button is-fullwidth signin-button-in">
+            <button class="button is-fullwidth signin-button-in" id="signin-button-in">
               Sign In
             </button>
           </p>

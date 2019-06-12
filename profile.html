@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Color Me! | Register</title>
+  <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/profile.css">
+</head>
+<body>
+  <div class="hero is-fullheight">
+    <div class="hero-head">
+      <nav class="navbar is-fixed-top has-background-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <img src="./img/logo.png">
+          </a>
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item active" href="collection.html">Collection</a>
+            <a class="navbar-item">Resources</a>
+            <a class="navbar-item">About Us</a>
+          </div>
+
+          <div class="navbar-end">
+            <!-- <figure class="navbar-item small-profile-pict">
+              <p class="image is-48x48">
+                <img class="is-rounded" src="https://bulma.io/images/placeholders/48x48.png">
+              </p>
+            </figure> -->
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">Munyaaa</a>
+
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="profile.html">Profile</a>
+                <!-- <a class="navbar-item">Saved</a> -->
+                <!-- <hr class="navbar-divider"> -->
+                <a class="navbar-item" id="sign-out">Sign Out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns box">
+          <div class="column is-four-fifths is-marginless is-paddingless">
+            <div class="title">Personal Information</div>
+          </div>
+          <span class="horizontal-line"></span>
+          <div class="column is-four-fifths">
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">Username</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control">
+                    <p class="description">Munyaaa</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-four-fifths">
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">Email</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control">
+                    <p class="description">munya@gmail.com</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-four-fifths">
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">Password</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control">
+                    <p class="description">&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-four-fifths">
+            <div class="field is-horizontal">
+              <div class="field-label is-normal">
+                <label class="label">Birthday</label>
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <p class="control">
+                    <p class="description">July 27 1999</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-four-fifths is-centered">
+            <div class="field">
+              <div class="control control-save-changed-button">
+                <button id="save-changed-button" class="button save-changed-button">
+                  Save Changed
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal has-text-centered" id="register-success">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="column">
+            <div class="column is-marginless">
+              <button class="modal-close is-large" id="register-success-close" aria-label="close"></button>
+            </div>
+            <div class="column login-image-column">
+              <figure class="image is-256x256">
+                <img src="img/register-image.png">
+              </figure>
+            </div>
+            <p class="title is-3">Register Success!!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal has-text-centered" id="register-error">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="column">
+            <div class="column is-marginless">
+              <button class="modal-close is-large" id="register-error-close" aria-label="close"></button>
+            </div>
+            <p class="title is-3">Register Success!!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/profile.js"></script>
+  <script type="text/javascript" src="./js/auth.js"></script>
+</body>
+</html>

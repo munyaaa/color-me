@@ -83,3 +83,11 @@
 .image img:hover {
     cursor: pointer;
 }
+
+.navbar-item.has-dropdown {
+    margin-right: 1em;
+}
+
+.navbar-brand {
+    margin-left: 1em;
+}
