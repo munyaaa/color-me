@@ -88,7 +88,7 @@
 
   function replacePasswordToStar(p) {
     for ( var i = 0 ; i < p.length ; i++ ) {
-      p = p.replace(p[i], '&#x25CF')
+      p = p.replace(p[i], '*')
     }
     return p
   }
