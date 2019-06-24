@@ -40,10 +40,15 @@ function getCategory () {
 document.addEventListener('click', function(e) {
   let button = e.target
   if(button.id.startsWith('category-') == true){
+    console.log('button id starts with category')
     let filter = button.getAttribute('data-filter')
+    console.log(filter)
     let categoryButton = $$('.category')
+    console.log(categoryButton)
     var c = button.classList
+    console.log(c)
     var catArr = getCategory()
+    console.log(catArr)
     if(button.getAttribute('data-reset') === 'true'){
       if(`${c}`.search('is-clicked') < 0){
         // console.log(`${c}`.search('is-clicked'))
